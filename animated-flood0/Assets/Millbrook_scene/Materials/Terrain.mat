@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Terrain
-  m_Shader: {fileID: 4800000, guid: 480106abda5b15e42aa9ffc965ed7a30, type: 3}
+  m_Shader: {fileID: 4800000, guid: cae96d627f45ec04fb89d9438a308834, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -35,7 +35,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DispTex:
-        m_Texture: {fileID: 2800000, guid: 909b686c9c384a94cb05671be27391b8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2a5c70775f194b4479631a4dbaf9c346, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:

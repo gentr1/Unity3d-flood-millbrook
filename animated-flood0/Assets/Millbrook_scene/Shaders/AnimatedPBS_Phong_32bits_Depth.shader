@@ -16,11 +16,11 @@
             _Glossiness ("Smoothness", Range(0, 1)) = 0.5
         }
         SubShader {
-            Tags { "RenderType"="Opaque" }
+            Tags { "Queue" = "Transparent" "RenderType"="Transparent" /*"RenderType"="Opaque"*/ }
             LOD 300
             
             CGPROGRAM
-            #pragma surface surf Standard addshadow fullforwardshadows vertex:disp tessellate:tessEdge tessphong:_Phong
+            #pragma surface surf Standard addshadow fullforwardshadows vertex:disp tessellate:tessEdge tessphong:_Phong alpha:fade
             #include "FreeTess_Tessellator.cginc"
 
             struct appdata {
@@ -81,6 +81,8 @@
 
             void surf (Input IN, inout SurfaceOutputStandard o) {
                 half4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+				//c.r=0.3;
+				//c.w=0.3;
                 half4 mos = tex2D (_MOS, IN.uv_MOS);
 
                 o.Albedo = c.rgb;
@@ -88,6 +90,7 @@
                 o.Smoothness = mos.b *_Glossiness;
                 o.Occlusion = mos.g;
                 o.Normal = UnpackNormal(tex2D(_NormalMap, IN.uv_MainTex));
+				o.Alpha = c.a;
             }
             ENDCG
         }

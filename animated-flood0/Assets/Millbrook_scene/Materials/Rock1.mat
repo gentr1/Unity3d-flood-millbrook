@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Rock1
-  m_Shader: {fileID: 4800000, guid: 9055f791bb6ea0a4e97a3d471046fb33, type: 3}
+  m_Shader: {fileID: 4800000, guid: 31ce417dcb8b5be4ba01e51d53b372c4, type: 3}
   m_ShaderKeywords: _DETAIL_MULX2 _NORMALMAP
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -36,6 +36,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _DispTex:
         m_Texture: {fileID: 2800000, guid: 8044fcf613e4b7140b820786d3824add, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DispTex0:
+        m_Texture: {fileID: 2800000, guid: 2a5c70775f194b4479631a4dbaf9c346, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DispTex2:

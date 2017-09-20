@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 102
+  controlID: 9
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -356,7 +356,8 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders: []
+    m_Folders:
+    - Assets/Millbrook_scene/Shaders
   m_ViewMode: 0
   m_StartGridSize: 96
   m_LastFolders: []
@@ -367,7 +368,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 50220000
     m_LastClickedID: 8784
-    m_ExpandedIDs: 000000002c26000030260000362600003e260000462600005e26000062260000c0260000c2260000c4260000c6260000
+    m_ExpandedIDs: 000000002e260000322600003826000040260000482600006026000064260000c2260000c4260000c6260000c8260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -395,21 +396,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 112}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c26000030260000362600003e260000462600005e26000062260000c0260000c2260000c4260000c6260000
+    m_ExpandedIDs: 000000002e260000322600003826000040260000482600006026000064260000c2260000c4260000c6260000c8260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: AnimatedPBS_Phong_32bits_Color_Depth
-      m_OriginalName: AnimatedPBS_Phong_32bits_Color_Depth
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 9952
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -511,8 +512,8 @@ MonoBehaviour:
     height: 598
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e260000
-    m_LastClickedID: 9870
+    m_SelectedIDs: 90260000
+    m_LastClickedID: 9872
     m_ExpandedIDs: 1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -568,9 +569,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.2478888, y: -22.564444, z: -10.903447}
+    m_Target: {x: -0.17500353, y: -20.202343, z: -12.916399}
     speed: 2
-    m_Value: {x: -2.2478888, y: -22.564444, z: -10.903447}
+    m_Value: {x: -0.17500353, y: -20.202343, z: -12.916399}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -593,13 +594,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.013414059, y: 0.8381911, z: -0.5448207, w: -0.020643473}
+    m_Target: {x: 0.018590406, y: 0.8630408, z: -0.5037868, w: 0.031840425}
     speed: 2
-    m_Value: {x: -0.013414059, y: 0.8381911, z: -0.5448207, w: -0.020643473}
+    m_Value: {x: 0.018590406, y: 0.8630408, z: -0.5037868, w: 0.031840425}
   m_Size:
-    m_Target: 28.563843
+    m_Target: 29.488373
     speed: 2
-    m_Value: 28.563843
+    m_Value: 29.488373
   m_Ortho:
     m_Target: 0
     speed: 2

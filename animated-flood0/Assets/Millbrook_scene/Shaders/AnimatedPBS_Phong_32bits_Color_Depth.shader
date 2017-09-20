@@ -50,7 +50,7 @@
 			sampler2D _DispTex0;
             sampler2D _MOS;
             uniform float4 _DispTex_ST;
-			float difference;
+			//float difference;
             void disp (inout appdata v)
             {
 				float myr = tex2Dlod(_DispTex, float4(v.texcoord.xy * _DispTex_ST.xy + _DispTex_ST.zw,0,0)).x;
@@ -68,7 +68,7 @@
 				const float UnpackDownscale = 255.0 / 256.0; 
 				const float4 UnpackFactors = UnpackDownscale / float4( 256.0*256.0*256.0,256.0*256.0,256.0,1.0);
 				float d = lerp(dot(float4 (myr,myg,myb,mya) ,UnpackFactors),dot(float4 (myr2,myg2,myb2,mya2) ,UnpackFactors),_Time_t) * _Displacement*_ScaleDisplacement;
-				difference = (d- (dot(float4 (myr0,myg0,myb0,mya0) ,UnpackFactors) * _Displacement*_ScaleDisplacement))/( _Displacement*_ScaleDisplacement);
+				//difference = (d- (dot(float4 (myr0,myg0,myb0,mya0) ,UnpackFactors) * _Displacement*_ScaleDisplacement))/( _Displacement*_ScaleDisplacement);
                 //float d = tex2Dlod(_DispTex, float4(v.texcoord.xy * _DispTex_ST.xy + _DispTex_ST.zw,0,0)).r * _Displacement;
                 //d = d * 0.5 - 0.5 +_DispOffset;
 				d = d +_DispOffset;
@@ -90,11 +90,18 @@
                 half4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
 
 				
-				float flood_heigh= (lerp(tex2D (_DispTex, IN.uv_MainTex),tex2D (_DispTex2, IN.uv_MainTex),_Time_t)-tex2D (_DispTex0, IN.uv_MainTex));
-				c.r=0.8-((flood_heigh*3.0)*0.8);
-				c.g=1.0-((flood_heigh*3.0)*0.7);
-				c.b=1.0-((flood_heigh*3.0)*0.2);
-				c.a=0.4+((flood_heigh*1.0)*0.3);
+				float4 flood_heigh= lerp(tex2D (_DispTex, IN.uv_MainTex),tex2D (_DispTex2, IN.uv_MainTex),_Time_t)-tex2D (_DispTex0, IN.uv_MainTex);
+				const float UnpackDownscale = 255.0 / 256.0; 
+				const float4 UnpackFactors = UnpackDownscale / float4( 256.0*256.0*256.0,256.0*256.0,256.0,1.0);
+				float diff_color= dot(flood_heigh*100.0 ,UnpackFactors);
+				c.r=0.9-((diff_color*10.0)*0.9);
+				c.g=0.9-((diff_color*10.0)*0.7);
+				c.b=0.9-((diff_color*10.0)*0.2);
+				c.a=0.1+((diff_color*10.0)*0.6);
+				//c.r=0.8-((flood_heigh*3.0)*0.8);
+				//c.g=1.0-((flood_heigh*3.0)*0.7);
+				//c.b=1.0-((flood_heigh*3.0)*0.2);
+				//c.a=0.4+((flood_heigh*1.0)*0.3);
 				//c.r=1.0-((flood_heigh*2.0)*1.0);
 				//c.g=1.0-((flood_heigh*2.0)*0.7);
 				//c.b=1.0-((flood_heigh*2.0)*0.2);

@@ -101,7 +101,7 @@ Material:
     - _SpecPow: 0.431
     - _SrcBlend: 1
     - _Tess: 32
-    - _Time_t: 0
+    - _Time_t: 1
     - _UVSec: 0
     - _ZWrite: 1
     - _maxDist: 50
